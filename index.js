@@ -70,7 +70,7 @@ class App extends Component {
           <p>{ this.state.studentDetails[2].age }</p>
           <div>
           {
-            this.state.studentDetails.map( student => { return ( <div><h3> { student.name } </h3>             
+            this.state.studentDetails.map( student => { return ( <div key={student.id}><h3> { student.name } </h3>             
             <dl><dt><b>Skills are:</b></dt> { student.skills.map ( skill => { return ( <dd>{ skill.tool }</dd>) })} </dl>  </div> ) } )
           }
           </div>
